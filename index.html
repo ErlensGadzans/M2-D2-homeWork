@@ -1,0 +1,241 @@
+<!--
+ ASSIGNMENT RULES
+ - The solution must be pushed to the repository and be available for the tutors by the end of the day.
+ - You can ask for tutor's help.
+ - You can google / use StackOverflow BUT we suggest you to use just the material provided.
+ - To test the page, just open it with your default browser.
+ - Use Bootstrap4 classes to render the page.
+ - Use correctly containers and rows in order to achieve a great display.
+
+ ASSIGNMENT TOPIC
+ You are creating a website to showcase your favourite music albums.
+ In this page you'd like to have a short bio of yourself, the top albums of your life, 
+ the worst album you ever listen to and everything related to the music you love.
+
+ NOTE:
+ Most of the times, even the most expert of designers needs inspiration.
+ Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+ Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
+ -->
+
+<!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS
+
+      
+       /* EXERCISE 1
+             For all Albums we'd like to have a consistent style.
+             Create a class for:
+             - The album container
+             - The album cover
+             - The album title
+             - The album group / singer / dj
+             - The album genre
+             - The album duration
+             - etc
+          */
+    
+      EXERCISE 2 
+             Implement a navigation bar using the bootstrap component
+             This navigation bar must be linked to every section in your page
+         -->
+
+<!-- EXERCISE 3
+             Create a responsive section for your favourite albums.
+             In this section you should have:
+             - 4 albums per row when the screen is very large
+             - 3 albums per row when you are on a tablet (or a smaller window)
+             - 2 albums per row when you are on a small screen
+         -->
+
+<!-- EXERCISE 4
+             Create a section for the album review.
+             Pick one of your fav albums, and create a section with:
+             - Cover
+             - Title
+             - Band
+             - Lenght
+             - Genre
+             - Tracklist
+             - ... And whatever you think it's interesting about it!
+         -->
+
+<!-- EXERCISE 5
+             Worst album list! Find out the music you don't really like or you find overrated and list it
+             in this "hall of shame" chart!
+         -->
+
+<!-- EXERCISE 6
+             Do you have any musician / band you admire or you are fan of?
+             This section is dedicated to him / her / them!
+             Feel free to experiment in this part of the page.
+         -->
+
+<!-- EXERCISE 7
+             Just covers!
+             Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+             Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+         -->
+
+<!-- EXERCISE 8
+             Implement a footer with some information / social links
+         -->
+
+<!-- EXTRA:
+          EXERCISE 9
+             Create album details that are going to be toggled on and off by clicking on the album image
+         -->
+
+<!-- EXERCISE 10
+             Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+         -->
+
+<!--
+             EXERCISE 11
+             Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+         -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>My music</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>About my music</h1>
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#section1">Albums <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#section2">Ligabue Album description</a>
+            </li>
+           
+          </ul>
+          
+        </div>
+      </nav>
+      <div class="jumbotron">
+        <h1 class="display-4">About my music taste!</h1>
+        <p class="lead">
+          I like all kinds of music and it is very difficult to point your
+          attention to some special albums. So I will display a couple of
+          albums, which comes first in my mind, but it does not means, that I
+          listen to only one style of music.
+        </p>
+      </div>
+    </div>
+    <div id="section1">
+
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
+      <div class="card">
+        <img src="bonjovi.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Slippery When Wet</h5>
+            <h6 class="Band">Band: Bon Jovi</h6>
+            <h6 class="Genre">Genre: Rock</h6>
+            <h6 class="Duration">Duration: 43 min 49 sec</h6>
+            <a
+              href="https://www.youtube.com/watch?v=M15gawGu6VE&list=PLCFA6FF71C4E34E76"
+              target="_blank"
+              class="btn btn-primary"
+              >Listen on Youtube</a
+            >
+        </div>
+      </div>
+      <div class="card">
+        <img src="nickleback.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">All the Right Reasons</h5>
+            <h6 class="Band">Band: Nickelback</h6>
+            <h6 class="Genre">Genre: Rock</h6>
+            <h6 class="Duration">Duration:41 min 33 sec</h6>
+            <a
+              href="https://www.youtube.com/watch?v=V7dAMCgLnOo&list=PLhQ__WZiNh3UDF6xE0xWXJCThbHwMRrIk"
+              target="_blank"
+              class="btn btn-primary"
+              >Listen on Youtube</a
+            >
+        </div>
+      </div>
+      <div class="card">
+        <img src="queen.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">Greatest Hits</h5>
+            <h6 class="Band">Band: Queen</h6>
+            <h6 class="Genre">Genre: Rock</h6>
+            <h6 class="Duration">Duration: 1 h 17 min</h6>
+            <a
+              href="https://www.youtube.com/watch?v=PYadlIf01Ww&list=PL260E59D9DE5DC216"
+              target="_blank"
+              class="btn btn-primary"
+              >Listen on Youtube</a
+            >
+        </div>
+      </div>
+      <div class="card">
+        <img src="Ligabue.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+           <h5 class="card-title">Sette notti in Arena</h5>
+          <h6 class="Band">Band: Ligabue</h6>
+          <h6 class="Genre">Genre: Rock</h6>
+          <h6 class="Duration">Duration: 66 min 55 sec</h6>
+          <a
+            href="https://www.youtube.com/watch?v=yrwkUD5p7w4&list=PLhwJLcc_mHyQrlEBg4ujBWV8OKWxSMcka"
+            target="_blank"
+            class="btn btn-primary"
+            >Listen on Youtube</a
+          >
+        </div>
+    </div>
+</div>
+
+    <div id="section2">
+        <div class="jumbotron">
+            <h1 class="display-4">Ligabue "Seven nights in the Arena"!</h1>
+            <p class="lead">It was a great concert. Actually I arrived in Verona accidentally from Riva del Garda. It was a boring evening close to Garda lake. I took a car and drove directly to Verona. By the accident, I had a chance to listen to this concert. It was an amazing atmosphere and I bought a cd of course. When I listen to this album, I remember a lovely evening in Verona.</p>
+            <a class="btn btn-primary btn-lg" href="https://www.youtube.com/watch?v=uWuwmEo2YQY" target="_blank" role="button">Press here to watch the concert</a>
+          </div>
+          
+        </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
