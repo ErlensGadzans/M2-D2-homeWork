@@ -11,3 +11,7 @@ footer {
   background-color: gray;
   color: black;
 }
+
+.col {
+  size: square;
+}
