@@ -1,3 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;600;900&display=swap");
+
+body {
+  background-color: black;
+  font-family: "Prompt", sans-serif;
+}
+h1 {
+  margin-left: 150px;
+  font-weight: 600 !important;
+  color: #c79846;
+}
+h2,
+h3,
+p {
+  color: #c79846;
+}
+.navbar a {
+  color: #c79846;
+}
+.jumbotron {
+  background-image: url("img/bonjovicover.jpg");
+  background-size: cover;
+  height: 600px;
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  perspective: 1000px; /*3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: rgb(39, 38, 38);
+  color: #c79846;
+  transform: rotateY(180deg);
+}
+
 article {
   min-height: 100%;
   display: grid;
@@ -9,9 +87,6 @@ footer {
   justify-content: center;
   padding: 20px;
   background-color: gray;
-  color: black;
-}
-
-.col {
-  size: square;
+  color: black !important;
+  font-weight: 100;
 }
